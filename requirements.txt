@@ -1,0 +1,5 @@
+# Standard dependencies
+chardet
+
+# tkinter is built into Python. On Linux, install separately:
+# sudo apt install python3-tk

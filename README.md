@@ -10,6 +10,7 @@ The program merges lines unless separated by an empty line (indicating a paragra
 
 ## Usage
 Run main.py (You can use .bat in Windows or .sh file in Linux)
+    make sure to chmod +x run_unwrapper.sh
 Use the file dialog to select the .txt file.
 Find the unwrapped version saved in the same folder as the original file.
 
