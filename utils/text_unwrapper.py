@@ -9,7 +9,6 @@ def unwrap_text(text):
     paragraphs = []
     buffer = []
 
- 
     for i in range(len(lines)):
         line = lines[i].strip()
         if not line:
