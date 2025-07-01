@@ -11,15 +11,21 @@ from file_selector import select_pdf_file
 from utils.text_loader import load_text_file
 from utils.text_unwrapper import unwrap_text
 from utils.text_saver import save_text_file
+from utils.file_handler import get_last_directory, save_last_directory
 
 def main():
     root = tk.Tk()
     root.withdraw()
     messagebox.showinfo("Select File", "Please select a .txt file to unwrap.")
-    file_path = select_pdf_file()
+
+    last_dir = get_last_directory()
+    file_path = select_pdf_file(last_directory=last_dir)
+
     if not file_path or not file_path.lower().endswith('.txt'):
         print("No .txt file selected. Exiting.")
         sys.exit(1)
+
+    save_last_directory(os.path.dirname(file_path))
 
     raw_text = load_text_file(file_path)
     unwrapped_text = unwrap_text(raw_text)
