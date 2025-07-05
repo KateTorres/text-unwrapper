@@ -1,10 +1,11 @@
 # Text Unwrapper
 This short python program unwraps line-wrapped `.txt` files by removing unnecessary line breaks. This can be useful for further processing, such as conversion of text into audio.
-The program merges lines unless separated by an empty line (indicating a paragraph break). It uses a simple GUI prompt to select a `.txt` file and saves the result with a `_unwrapped.txt` suffix.
+The program merges lines unless separated by an empty line (indicating a paragraph break). It uses a simple GUI prompt to select a `.txt` file and saves the result with a `_unwrapped.txt` suffix and provides user with an option to exclude bracketed numbers (for example: [123]).
 
 ## Features
 - GUI-based file selection  
-- Preserves paragraph breaks  
+- Preserves paragraph break (user menu option)
+- excludes bracketed numbers (user menu option)  
 - Detects encoding with `chardet`
 - Saves the unwrapped output to a new file  
 
@@ -25,11 +26,15 @@ text-unwrapper/
 ├── config.py
 ├── load_log.txt (auto-created)
 ├── utils/
+│   ├── bracket_number_remover.py
+│   ├── operations_menu.py
+│   ├── file_handler.py
 │   ├── text_loader.py
 │   ├── text_unwrapper.py
 │   ├── text_saver.py
 │   └── logger.py
 └── README.md
+└── CHANGELOG.md
 ```
 
 ## Requirements
